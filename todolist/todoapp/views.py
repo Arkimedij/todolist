@@ -11,6 +11,7 @@ def home(request):
         details = Task(taskTitle=title,taskdesc=desc)
         details.save()
         context = {'success' : True}
+    
     return render(request,'home.html',context)
 
 def task(request):
