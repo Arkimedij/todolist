@@ -40,16 +40,22 @@
             <thead>
                 <th scope = "col">No</th>
                 <th scope = "col">Task</th>
-                <th scope = "col">Check</th>
+                <th scope = "col">Task</th>
                 <th scope = "col">Action</th>
+                <th scope = "col">
             </thead>
 
             <tbody>
-                <tr>
-                   
-                </tr>
+              {% for task in tasks %}
+              <tr>
+                <th scope = "row">{{forloop.counter}}</th>
+                <td>{{task.tasktitle}}</td>
+                <td>{{task.taskdesc}}</td>
+                <td>{{task.time}}</td>
+              </tr>
+              {% endfor %}
             </tdbody>
-
+              
         </table>
     </div>
     
