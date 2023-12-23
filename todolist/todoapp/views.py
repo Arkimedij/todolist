@@ -18,3 +18,6 @@ def task(request):
     alltasks = Task.objects.all()
     content = {'tasks' : alltasks}
     return render(request,'task.html',content)
+
+def edit_task(request):
+    return render(request,'edit.html')
