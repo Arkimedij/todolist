@@ -21,3 +21,6 @@ def task(request):
 
 def edit_task(request):
     return render(request,'edit.html')
+
+def delete(request):
+    return render(request, 'delete.html')
