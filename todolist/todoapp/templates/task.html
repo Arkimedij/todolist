@@ -45,7 +45,7 @@
                 <th scope = "col">Action</td>
             </thead>
 
-            <tbody>
+            <tdbody>
               {% for task in tasks %}
               <tr>
                 <th scope = "row">{{forloop.counter}}</th>
@@ -54,7 +54,7 @@
                 <td>{{task.time}}</td>
                 <td>
                   <a href="#">Edit</a>
-                  <a href="#">Delete</a>
+                  <a href="{% url 'delete' task.id %}">Delete</a>
                 </td>
               </tr>
               {% endfor %}

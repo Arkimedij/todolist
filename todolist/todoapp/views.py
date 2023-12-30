@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . models import Task
-# from django.http import HttpResponse
-# Create your views here.
+
 def home(request):
     context = {'success' : False}
     if request.method == "POST":
@@ -23,4 +22,6 @@ def edit_task(request):
     return render(request,'edit.html')
 
 def delete(request):
-    return render(request, 'delete.html')
+    task = Task.objects.get(id=pk)
+    task.delete()
+    return redirect('task')
